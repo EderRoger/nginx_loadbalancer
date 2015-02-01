@@ -3,6 +3,10 @@ Vagrant provisioning with puppet creating 4(servers)  to testing nginx upstream 
 
  Project example https://github.com/EderRoger/AngularMongo
 
- Install Vagrant 
- add the box   vagrant box add hashicorp/precise32 http://files.vagrantup.com/precise32.box
- vagrant up
+ Install Vagrant
+
+ add the box   
+
+vagrant box add hashicorp/precise32 http://files.vagrantup.com/precise32.box
+
+vagrant up
