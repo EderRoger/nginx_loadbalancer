@@ -14,3 +14,11 @@ package { npm:
   ensure => present,
   require => Package["nodejs"]
 }
+
+#exec { "npm_update":
+#    command => "npm config set registry https://registry.npmjs.org/",
+#    path => '/usr/bin/:/bin/',
+#    require => Package['nodejs'],
+#    user => 'root'
+#}
+
