@@ -6,13 +6,14 @@ exec { "aptGetUpdate":
 package { mongodb:
   ensure => present
 }
+
 package { nodejs:
-  ensure => present
+  ensure => present,
 }
 
 package { npm:
-  ensure => present,
-  require => Package["nodejs"]
+  ensure => latest,
+    require => Package["nodejs"]
 }
 
 #exec { "npm_update":
