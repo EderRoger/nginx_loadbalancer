@@ -7,14 +7,22 @@ package { mongodb:
   ensure => present
 }
 
-package { nodejs:
-  ensure => present,
-}
+#package { nodejs:
+#  ensure => present,
+#}
 
-package { npm:
-  ensure => latest,
-    require => Package["nodejs"]
+exec { "add_node_package":
+    command => "curl -sL https://deb.nodesource.com/setup | sudo bash -",
+    path    => "/usr/local/bin/:/bin/",
+    # path    => [ "/usr/local/bin/", "/bin/" ],  # alternative syntax
 }
+ 
+package {nodejs: require => Exec["add_node_package"]}
+
+#package { npm:
+#  ensure => latest,
+#    require => Package["nodejs"]
+#}
 
 #exec { "npm_update":
 #    command => "npm config set registry https://registry.npmjs.org/",
