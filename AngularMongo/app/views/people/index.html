@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<div class="table-responsive">
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+            <th width="2%">#</th>
+            <th width="49%">Name</th>
+            <th width="49%">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="people in people | orderBy: 'name'">
+            <td>
+                <a href="#/people/{{people._id}}" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+            </td>
+            <td>{{ people.name | uppercase }}</td>
+            <td>{{ people.email | lowercase }}</td>
+        </tr>
+        <tr ng-show="people.length == 0">
+            <td colspan="4">
+                <span>No data to show!</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<a class="btn btn-primary" href="#/people/new">New</a>
