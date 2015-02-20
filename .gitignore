@@ -1,7 +1,12 @@
 # Logs
 logs
 *.log
-
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+.idea
 # Runtime data
 pids
 *.pid
@@ -28,3 +33,9 @@ node_modules
 .lock-wscript
 
 .vagrant
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
