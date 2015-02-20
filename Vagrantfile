@@ -21,6 +21,8 @@ config.vm.box_url = "http://files.vagrantup.com/precise32.box"
    server4_config.vm.network :private_network, :ip => "192.168.33.13"
  end
 
+ config.vm.network :forwarded_port, guest: 3000, host: 3000 
+ 
  config.vm.provider :virtualbox do |vb|
    vb.customize ["modifyvm", :id, "--memory", "1024", "--hwvirtex", "off"]
  end
