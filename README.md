@@ -5,7 +5,7 @@ Vagrant provisioning with puppet creating 4(servers)  to testing nginx upstream 
 
  Install Vagrant
 
- add the box   
+ add the box
 
 vagrant box add hashicorp/precise32 http://files.vagrantup.com/precise32.box
 
@@ -38,16 +38,10 @@ vagrant up
 ``cd /vagrant/AngularMongo``
 
 ``npm start``
-
-# Open the shell 4:
-
-``vagrant ssh server4``
-
-``sudo service nginx start
-``
+<br>
 
 Open your web browser and access: http://192.168.33.13/app/#/people or<br>
-execute benchmark testing run this command executin 500 requests try it :) and look the servers responding:<br>
+open the shell and execute benchmark testing. The following code execute 500 requests try it :) and look the servers responding:<br>
 
 ``ab -c 40 -n 500 http://192.168.33.13/``<br>
 
