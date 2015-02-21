@@ -38,9 +38,18 @@ file {"rm-nginx-default":
     require => Package['nginx'],
 }
 
+service { "nginx":
+    ensure => running,
+    enable => true,
+    hasstatus => true,
+    hasrestart => true,
+    require => Package["nginx"],
+}
+
 file {"setup-nginx-default":
     path => '/etc/nginx/sites-enabled/default.conf',
     ensure => present,
     require => Package['nginx'],
     source => "/vagrant/manifests/default.conf",
+    notify => Service["nginx"],
 }
