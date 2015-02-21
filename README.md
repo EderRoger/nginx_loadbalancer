@@ -50,4 +50,4 @@ Open your web browser and access: http://192.168.33.13/app/#/people
 
 and look each terminal and see loadbalancing in action.
 
-![alt tag](http://www.keko.com.br/blog/wp-content/uploads/2013/01/Lamborghini-Aventador_keko-acess%C3%B3rios_keko_acess%C3%B3rios_carros-1.jpg)
+![alt tag](https://raw.githubusercontent.com/EderRoger/nginx_loadbalancer/master/files/loadbalacing.png)
