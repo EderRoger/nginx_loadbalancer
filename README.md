@@ -49,3 +49,5 @@ vagrant up
 Open your web browser and access: http://192.168.33.13/app/#/people
 
 and look each terminal and see loadbalancing in action.
+
+![alt tag](https://drive.google.com/open?id=0B_VcLuzN78W7b2FqeVdIMG1adUk&authuser=0)
