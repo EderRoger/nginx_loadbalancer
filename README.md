@@ -16,5 +16,36 @@ sudo npm install
 
 bower install
 
-
 vagrant up
+
+#Open the shell 1:
+``vagrant ssh server1``
+
+``cd /vagrant/AngularMongo``
+
+``npm start``
+
+#Open the shell 2:
+``vagrant ssh server2``
+
+``cd /vagrant/AngularMongo``
+
+``npm start``
+
+#Open the shell 3:
+``vagrant ssh server3``
+
+``cd /vagrant/AngularMongo``
+
+``npm start``
+
+# Open the shell 4:
+
+``vagrant ssh server4``
+
+``sudo service nginx start
+``
+
+Open your web browser and access: http://192.168.33.13/app/#/people
+
+and look each terminal and see loadbalancing in action.
