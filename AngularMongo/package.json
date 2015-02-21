@@ -51,6 +51,6 @@
   },
   "scripts": {
     "test": "grunt test",
-    "start": "node app"
+    "start": "DEBUG=* node app"
   }
 }
