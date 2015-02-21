@@ -29,6 +29,12 @@ config.vm.box_url = "http://files.vagrantup.com/precise32.box"
      puppet.manifest_file = "nginx.pp"
    end
  end
+ config.vm.define :db do |db_config|
+   db_config.vm.network :private_network, :ip => "192.168.33.14"
+   db_config.vm.provision "puppet" do |puppet|
+     puppet.manifest_file = "db.pp"
+   end
+ end
 
 # config.vm.network :forwarded_port, guest: 3000, host: 3000
 # config.vm.network :forwarded_port, guest: 3000, host: 3000

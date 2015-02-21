@@ -5,9 +5,9 @@ exec { "aptGetUpdate":
   path => ["/bin", "/usr/bin"]
 }
 
-package { mongodb:
-  ensure => present
-}
+#package { mongodb:
+#  ensure => present
+#}
 
 package { 'curl':
   ensure => installed
