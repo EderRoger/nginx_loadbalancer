@@ -46,12 +46,12 @@ vagrant up
 ``sudo service nginx start
 ``
 
-Open your web browser and access: http://192.168.33.13/app/#/people
-
-and look each terminal and see loadbalancing in action.
-
-To execute benchmark testing run this command executin 500 requests try it :) and look the servers responding:
+Open your web browser and access: http://192.168.33.13/app/#/people or<br>
+execute benchmark testing run this command executin 500 requests try it :) and look the servers responding:<br>
 
 ``ab -c 40 -n 500 http://192.168.33.13/``<br>
+
+Look each terminal and see loadbalancing in action.
+
 
 ![alt tag](https://raw.githubusercontent.com/EderRoger/nginx_loadbalancer/master/files/loadbalacing.png)
