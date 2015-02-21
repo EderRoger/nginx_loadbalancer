@@ -50,4 +50,4 @@ Open your web browser and access: http://192.168.33.13/app/#/people
 
 and look each terminal and see loadbalancing in action.
 
-![alt tag](https://drive.google.com/open?id=0B_VcLuzN78W7b2FqeVdIMG1adUk&authuser=0)
+![alt tag](http://www.keko.com.br/blog/wp-content/uploads/2013/01/Lamborghini-Aventador_keko-acess%C3%B3rios_keko_acess%C3%B3rios_carros-1.jpg)
