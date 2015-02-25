@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
     , single_connection
     , env_url = {
-        "development": "mongodb://192.168.33.14/angular_mongo"
+        "development": "mongodb://192.168.33.14/angular_mongo,mongodb://192.168.33.15/angular_mongo,mongodb://192.168.33.16/angular_mongo"
     }
     ;
 

@@ -1,5 +1,6 @@
  exec { "aptGetUpdate":
   command => "sudo apt-get update",
+  timeout => 0,
   path => ["/bin", "/usr/bin"]
 }
 
@@ -37,10 +38,21 @@ file {"setup-hosts-replicaset":
     source => "/vagrant/manifests/hosts",
 }
 
-# create a directory      
-file { "/mongo-metadata":
-    ensure => "directory",
+file {"setup-hostname":
+    path => '/etc/hostname',
+    ensure => present,
+    require => Package['mongodb'],
+    source => "/vagrant/manifests/mongo1/hostname",
 }
+
+# create a directory      
+#file { "/mongo-metadata":
+#    ensure => "directory",
+#    owner   => mongodb,
+#    group   => mongodb,
+#    mode    => '0755',
+#    recurse => true,  
+#}
 
 # Install mongodb client.
 #
