@@ -26,7 +26,7 @@ file {"setup-mongodb-conf":
     path => '/etc/mongodb.conf',
     ensure => present,
     require => Package['mongodb'],
-    source => "/vagrant/manifests/mongo1/mongodb.conf",
+    source => "/vagrant/manifests/mongo2/mongodb.conf",
     notify => Service["mongodb"],
 }
 

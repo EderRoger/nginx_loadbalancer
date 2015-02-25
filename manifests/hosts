@@ -1,0 +1,7 @@
+127.0.0.1         localhost
+127.0.0.1         mongo0
+127.0.0.1         precise32
+#mongos
+192.168.33.14     mongo0.replica.com
+192.168.33.15     mongo1.replica.com
+192.168.33.16     mongo2.replica.com

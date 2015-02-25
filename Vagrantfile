@@ -32,13 +32,25 @@ config.vm.box_url = "http://files.vagrantup.com/precise32.box"
  config.vm.define :db do |db_config|
    db_config.vm.network :private_network, :ip => "192.168.33.14"
    db_config.vm.provision "puppet" do |puppet|
-     puppet.manifest_file = "db.pp"
+     puppet.manifest_file = "db_mongo1.pp"
+   end
+ end
+  config.vm.define :db2 do |db2_config|
+   db2_config.vm.network :private_network, :ip => "192.168.33.15"
+   db2_config.vm.provision "puppet" do |puppet|
+     puppet.manifest_file = "db_mongo2.pp"
+   end
+ end
+  config.vm.define :db3 do |db3_config|
+   db3_config.vm.network :private_network, :ip => "192.168.33.16"
+   db3_config.vm.provision "puppet" do |puppet|
+     puppet.manifest_file = "db_mongo3.pp"
    end
  end
 
 # config.vm.network :forwarded_port, guest: 3000, host: 3000
 # config.vm.network :forwarded_port, guest: 3000, host: 3000
- 
+
  config.vm.provider :virtualbox do |vb|
    vb.customize ["modifyvm", :id, "--memory", "1024", "--hwvirtex", "off"]
  end
