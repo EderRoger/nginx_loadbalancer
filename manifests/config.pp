@@ -42,5 +42,10 @@ exec { "install_bower":
    timeout => 0,
    require => Package["nodejs"]
 }
-
-
+#enable to automatic start
+#exec { "start_apps":
+#   command => "npm start &",
+#  path => ["/bin", "/usr/bin"], 
+#   cwd => "/vagrant/AngularMongo",
+#   require => Exec["install_bower"],
+#}

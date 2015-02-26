@@ -41,6 +41,8 @@ file {"setup-hosts-replicaset":
 file {"setup-hostname":
     path => '/etc/hostname',
     ensure => present,
+    owner  => "root",
+    group  => "root",
     require => Package['mongodb'],
     source => "/vagrant/manifests/mongo1/hostname",
 }
