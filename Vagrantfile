@@ -47,9 +47,6 @@ config.vm.define :db do |db_config|
      puppet.manifest_file = "nginx.pp"
    end
  end
- 
-# config.vm.network :forwarded_port, guest: 3000, host: 3000
-# config.vm.network :forwarded_port, guest: 3000, host: 3000
 
  config.vm.provider :virtualbox do |vb|
    vb.customize ["modifyvm", :id, "--memory", "1024", "--hwvirtex", "off"]
