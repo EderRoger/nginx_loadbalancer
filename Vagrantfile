@@ -48,6 +48,6 @@ config.vm.define :db do |db_config|
  end
 
  config.vm.provider :virtualbox do |vb|
-   vb.customize ["modifyvm", :id, "--memory", "1024", "--hwvirtex", "off"]
+   vb.customize ["modifyvm", :id, "--memory", "768", "--hwvirtex", "off"]
  end
 end
